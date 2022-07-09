@@ -1,0 +1,11 @@
+<h1>Primeiro mandamento</h1>
+
+<h2>"Eu sou o Senhor Teu Deus, não terás outro Deus diante de Mim."</h2>
+
+<p *ngFor="let pecado of mandamentos.pecados">
+  <mat-checkbox [(ngModel)]="pecado.selecionado">
+    {{ pecado.texto }}
+  </mat-checkbox>
+</p>
+
+<button mat-flat-button color="primary">Próximo</button>
