@@ -1,0 +1,11 @@
+<h1>Segundo mandamento</h1>
+
+<h2>"Não tomarás o nome do Senhor teu Deus em vão."</h2>
+
+<p *ngFor="let pecado of mandamentos.pecados">
+  <mat-checkbox [(ngModel)]="pecado.selecionado">
+    {{ pecado.texto }}
+  </mat-checkbox>
+</p>
+
+<button mat-flat-button color="primary">Próximo</button>
