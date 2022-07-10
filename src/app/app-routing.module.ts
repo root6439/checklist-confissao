@@ -4,6 +4,16 @@ import { PrimeiroComponent } from './mandamentos/primeiro/primeiro.component';
 
 const routes: Routes = [
   {
+    path: 'confissao',
+    loadChildren: () =>
+      import('./confissao/confissao.module').then((m) => m.ConfissaoModule),
+  },
+  {
+    path: 'perguntas',
+    loadChildren: () =>
+      import('./perguntas/perguntas.module').then((m) => m.PerguntasModule),
+  },
+  {
     path: 'checklist',
     loadChildren: () =>
       import('./mandamentos/mandamentos.module').then(
