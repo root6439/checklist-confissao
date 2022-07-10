@@ -1,0 +1,14 @@
+<h1>Oitavo mandamento</h1>
+
+<h2>
+  Não levantar falso testemunho nem de qualquer outro modo faltar à verdade ou
+  difamar o próximo.
+</h2>
+
+<p *ngFor="let pecado of mandamentos.pecados">
+  <mat-checkbox [(ngModel)]="pecado.selecionado">
+    {{ pecado.texto }}
+  </mat-checkbox>
+</p>
+
+<button mat-flat-button color="primary">Próximo</button>

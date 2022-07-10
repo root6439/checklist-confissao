@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PrimeiroComponent } from './primeiro/primeiro.component';
@@ -7,15 +8,30 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { SegundoComponent } from './segundo/segundo.component';
 import { TerceiroComponent } from './terceiro/terceiro.component';
+import { QuartoComponent } from './quarto/quarto.component';
+import { QuintoComponent } from './quinto/quinto.component';
+import { SextoENonoComponent } from './sexto-enono/sexto-enono.component';
+import { SetimoEDecimoComponent } from './setimo-e-decimo/setimo-e-decimo.component';
+import { OitavoComponent } from './oitavo/oitavo.component';
 
 @NgModule({
-  declarations: [PrimeiroComponent, SegundoComponent, TerceiroComponent],
+  declarations: [
+    PrimeiroComponent,
+    SegundoComponent,
+    TerceiroComponent,
+    QuartoComponent,
+    QuintoComponent,
+    SextoENonoComponent,
+    SetimoEDecimoComponent,
+    OitavoComponent,
+  ],
   imports: [
     CommonModule,
     MatCheckboxModule,
     MandamentosRoutingModule,
     MatButtonModule,
     FormsModule,
+    RouterModule,
   ],
 })
 export class MandamentosModule {}
