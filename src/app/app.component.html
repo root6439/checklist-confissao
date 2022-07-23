@@ -1,4 +1,10 @@
-<mat-toolbar color="primary"> Checklist confissão </mat-toolbar>
+<mat-toolbar color="primary" class="d-flex">
+  <span style="flex: 1"> Checklist confissão </span>
+  <button mat-button routerLink="confissao">A Confissão</button>
+  <button mat-button routerLink="perguntas">Perguntas</button>
+  <button mat-button routerLink="dicas">Dicas</button>
+  <button mat-button routerLink="checklist">Checklist</button>
+</mat-toolbar>
 
 <div class="container-lg">
   <router-outlet></router-outlet>

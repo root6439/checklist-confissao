@@ -1,16 +1,24 @@
 import { SEXTO_E_NONO_MANDAMENTOS } from './../../shared/data/SextoENonoMandamento';
 import { Mandamento } from './../../shared/models/Mandamento';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { MandamentosService } from '../mandamentos.service';
 
 @Component({
   selector: 'app-sexto-enono',
   templateUrl: './sexto-enono.component.html',
   styleUrls: ['./sexto-enono.component.scss'],
 })
-export class SextoENonoComponent implements OnInit {
+export class SextoENonoComponent implements OnDestroy {
   mandamentos: Mandamento = SEXTO_E_NONO_MANDAMENTOS;
 
-  constructor() {}
+  constructor(private service: MandamentosService) {}
 
-  ngOnInit(): void {}
+  ngOnDestroy(): void {
+    let selecionados: string[] = this.mandamentos.pecados
+      .filter((value) => value.selecionado)
+      .map((value) => value.texto);
+
+    this.service.pecadosSelecionados =
+      this.service.pecadosSelecionados.concat(selecionados);
+  }
 }

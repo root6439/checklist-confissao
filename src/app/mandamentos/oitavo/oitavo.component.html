@@ -11,4 +11,12 @@
   </mat-checkbox>
 </p>
 
-<button mat-flat-button color="primary">Próximo</button>
+<button mat-flat-button color="primary" (click)="openPDF()">Próximo</button>
+
+<div class="col-md-8" id="htmlData">
+  <ul>
+    <li *ngFor="let item of service.pecadosSelecionados">
+      {{ item }}
+    </li>
+  </ul>
+</div>

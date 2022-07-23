@@ -14,6 +14,11 @@ const routes: Routes = [
       import('./perguntas/perguntas.module').then((m) => m.PerguntasModule),
   },
   {
+    path: 'dicas',
+    loadChildren: () =>
+      import('./dicas/dicas.module').then((m) => m.DicasModule),
+  },
+  {
     path: 'checklist',
     loadChildren: () =>
       import('./mandamentos/mandamentos.module').then(

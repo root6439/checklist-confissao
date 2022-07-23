@@ -1,5 +1,6 @@
-import { Mandamento } from './../../shared/models/Mandamento';
-import { Component, OnInit } from '@angular/core';
+import { MandamentosService } from './../mandamentos.service';
+import { Mandamento, Pecado } from './../../shared/models/Mandamento';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { PrimeiroMandamento } from 'src/app/shared/data/PrimeiroMandamento';
 
 @Component({
@@ -7,10 +8,17 @@ import { PrimeiroMandamento } from 'src/app/shared/data/PrimeiroMandamento';
   templateUrl: './primeiro.component.html',
   styleUrls: ['./primeiro.component.scss'],
 })
-export class PrimeiroComponent implements OnInit {
+export class PrimeiroComponent implements OnDestroy {
   mandamentos: Mandamento = PrimeiroMandamento;
 
-  constructor() {}
+  constructor(private service: MandamentosService) {}
 
-  ngOnInit(): void {}
+  ngOnDestroy(): void {
+    let selecionados: string[] = this.mandamentos.pecados
+      .filter((value) => value.selecionado)
+      .map((value) => value.texto);
+      
+    this.service.pecadosSelecionados =
+      this.service.pecadosSelecionados.concat(selecionados);
+  }
 }

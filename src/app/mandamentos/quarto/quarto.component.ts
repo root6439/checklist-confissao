@@ -1,16 +1,24 @@
 import { QUARTO_MANDAMENTO } from './../../shared/data/QuartoMandamento';
 import { Mandamento } from './../../shared/models/Mandamento';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { MandamentosService } from '../mandamentos.service';
 
 @Component({
   selector: 'app-quarto',
   templateUrl: './quarto.component.html',
   styleUrls: ['./quarto.component.scss'],
 })
-export class QuartoComponent implements OnInit {
+export class QuartoComponent implements OnDestroy {
   mandamentos: Mandamento = QUARTO_MANDAMENTO;
 
-  constructor() {}
+  constructor(private service: MandamentosService) {}
 
-  ngOnInit(): void {}
+  ngOnDestroy(): void {
+    let selecionados: string[] = this.mandamentos.pecados
+      .filter((value) => value.selecionado)
+      .map((value) => value.texto);
+
+    this.service.pecadosSelecionados =
+      this.service.pecadosSelecionados.concat(selecionados);
+  }
 }
