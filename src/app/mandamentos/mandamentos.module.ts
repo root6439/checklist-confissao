@@ -13,6 +13,8 @@ import { QuintoComponent } from './quinto/quinto.component';
 import { SextoENonoComponent } from './sexto-enono/sexto-enono.component';
 import { SetimoEDecimoComponent } from './setimo-e-decimo/setimo-e-decimo.component';
 import { OitavoComponent } from './oitavo/oitavo.component';
+import { ImprimirComponent } from './imprimir/imprimir.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { OitavoComponent } from './oitavo/oitavo.component';
     SextoENonoComponent,
     SetimoEDecimoComponent,
     OitavoComponent,
+    ImprimirComponent,
   ],
   imports: [
     CommonModule,
@@ -32,6 +35,7 @@ import { OitavoComponent } from './oitavo/oitavo.component';
     MatButtonModule,
     FormsModule,
     RouterModule,
+    MatIconModule,
   ],
 })
 export class MandamentosModule {}

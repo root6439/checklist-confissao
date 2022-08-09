@@ -1,3 +1,4 @@
+import { ImprimirComponent } from './imprimir/imprimir.component';
 import { OitavoComponent } from './oitavo/oitavo.component';
 import { SetimoEDecimoComponent } from './setimo-e-decimo/setimo-e-decimo.component';
 import { SextoENonoComponent } from './sexto-enono/sexto-enono.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'sexto-e-nono-mandamentos', component: SextoENonoComponent },
   { path: 'setimo-e-decimo-mandamentos', component: SetimoEDecimoComponent },
   { path: 'oitavo-mandamento', component: OitavoComponent },
+  { path: 'imprimir', component: ImprimirComponent },
   { path: '', redirectTo: 'primeiro-mandamento', pathMatch: 'full' },
 ];
 
