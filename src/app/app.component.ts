@@ -9,8 +9,4 @@ export class AppComponent {
   title: string = 'checklist-confissao';
 
   isMobile: boolean = window.screen.width <= 720;
-
-  ngOnInit() {
-    console.log(window.screen.width);
-  }
 }

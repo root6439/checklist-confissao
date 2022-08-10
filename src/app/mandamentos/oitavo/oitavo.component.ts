@@ -8,8 +8,6 @@ import {
   ViewChild,
 } from '@angular/core';
 import { MandamentosService } from '../mandamentos.service';
-import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
 
 @Component({
   selector: 'app-oitavo',
