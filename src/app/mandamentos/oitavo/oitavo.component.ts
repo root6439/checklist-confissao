@@ -24,7 +24,9 @@ export class OitavoComponent implements OnDestroy {
       .filter((value) => value.selecionado)
       .map((value) => value.texto);
 
-    this.service.pecadosSelecionados =
-      this.service.pecadosSelecionados.concat(selecionados);
+    this.service.pecadosSelecionados = new Set([
+      ...this.service.pecadosSelecionados,
+      ...selecionados,
+    ]);
   }
 }

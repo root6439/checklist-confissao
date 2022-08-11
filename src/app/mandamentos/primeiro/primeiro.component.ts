@@ -17,8 +17,10 @@ export class PrimeiroComponent implements OnDestroy {
     let selecionados: string[] = this.mandamentos.pecados
       .filter((value) => value.selecionado)
       .map((value) => value.texto);
-      
-    this.service.pecadosSelecionados =
-      this.service.pecadosSelecionados.concat(selecionados);
+
+    this.service.pecadosSelecionados = new Set([
+      ...this.service.pecadosSelecionados,
+      ...selecionados,
+    ]);
   }
 }
