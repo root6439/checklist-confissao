@@ -11,7 +11,7 @@ import { PrimeiroMandamento } from 'src/app/shared/data/PrimeiroMandamento';
 export class PrimeiroComponent implements OnDestroy {
   mandamentos: Mandamento = PrimeiroMandamento;
 
-  constructor(private service: MandamentosService) {}
+  constructor(public service: MandamentosService) {}
 
   ngOnDestroy(): void {
     let selecionados: string[] = this.mandamentos.pecados

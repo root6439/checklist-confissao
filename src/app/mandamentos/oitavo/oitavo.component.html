@@ -6,7 +6,7 @@
 </h2>
 
 <p *ngFor="let pecado of mandamentos.pecados">
-  <mat-checkbox [(ngModel)]="pecado.selecionado">
+  <mat-checkbox color="primary" [(ngModel)]="pecado.selecionado">
     {{ pecado.texto }}
   </mat-checkbox>
 </p>

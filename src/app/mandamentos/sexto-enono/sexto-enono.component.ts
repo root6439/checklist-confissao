@@ -11,7 +11,7 @@ import { MandamentosService } from '../mandamentos.service';
 export class SextoENonoComponent implements OnDestroy {
   mandamentos: Mandamento = SEXTO_E_NONO_MANDAMENTOS;
 
-  constructor(private service: MandamentosService) {}
+  constructor(public service: MandamentosService) {}
 
   ngOnDestroy(): void {
     let selecionados: string[] = this.mandamentos.pecados

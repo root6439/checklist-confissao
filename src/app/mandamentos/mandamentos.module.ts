@@ -15,6 +15,7 @@ import { SetimoEDecimoComponent } from './setimo-e-decimo/setimo-e-decimo.compon
 import { OitavoComponent } from './oitavo/oitavo.component';
 import { ImprimirComponent } from './imprimir/imprimir.component';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { MatIconModule } from '@angular/material/icon';
     FormsModule,
     RouterModule,
     MatIconModule,
+    MatMenuModule,
   ],
 })
 export class MandamentosModule {}

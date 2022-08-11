@@ -3,7 +3,7 @@
 <h2>"Eu sou o Senhor Teu Deus, não terás outro Deus diante de Mim."</h2>
 
 <p *ngFor="let pecado of mandamentos.pecados">
-  <mat-checkbox [(ngModel)]="pecado.selecionado">
+  <mat-checkbox color="primary" color="primary" [(ngModel)]="pecado.selecionado">
     {{ pecado.texto }}
   </mat-checkbox>
 </p>
@@ -15,3 +15,11 @@
 >
   Avançar
 </button>
+
+<button mat-button [matMenuTriggerFor]="menu">Limpar</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="service.clearMandament(mandamentos)">
+    Limpar este mandamento
+  </button>
+  <button mat-menu-item (click)="service.clearAll()">Limpar tudo</button>
+</mat-menu>
