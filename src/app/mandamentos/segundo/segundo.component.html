@@ -8,7 +8,8 @@
   </mat-checkbox>
 </p>
 
-<button mat-flat-button [routerLink]="['/checklist/primeiro-mandamento']">
+<button mat-stroked-button [routerLink]="['/checklist/primeiro-mandamento']">
+  
   Voltar
 </button>
 
@@ -18,11 +19,22 @@
   [routerLink]="['/checklist/terceiro-mandamento']"
 >
   Avançar
+  <mat-icon> keyboard_arrow_right </mat-icon>
 </button>
 
-<button mat-button [matMenuTriggerFor]="menu" [disabled]="service.somePecadoSelected()">Limpar</button>
+<button
+  mat-button
+  [matMenuTriggerFor]="menu"
+  [disabled]="service.somePecadoSelected()"
+>
+  Limpar
+</button>
 <mat-menu #menu="matMenu">
-  <button mat-menu-item (click)="service.clearMandament(mandamentos)" [disabled]="service.atLeastOneSelected(mandamentos)">
+  <button
+    mat-menu-item
+    (click)="service.clearMandament(mandamentos)"
+    [disabled]="service.atLeastOneSelected(mandamentos)"
+  >
     Limpar este mandamento
   </button>
   <button mat-menu-item (click)="service.clearAll()">Limpar tudo</button>

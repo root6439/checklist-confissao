@@ -9,7 +9,8 @@
 </p>
 
 <button mat-flat-button [routerLink]="['/checklist/segundo-mandamento']">
-  Voltar
+
+ Voltar
 </button>
 
 <button
@@ -18,6 +19,7 @@
   [routerLink]="['/checklist/quarto-mandamento']"
 >
   Avançar
+<mat-icon> keyboard_arrow_right </mat-icon>
 </button>
 
 <button mat-button [matMenuTriggerFor]="menu" [disabled]="service.somePecadoSelected()">Limpar</button>
