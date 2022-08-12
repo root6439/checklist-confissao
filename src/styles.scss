@@ -12,6 +12,14 @@ body {
 .mat-checkbox-layout {
   white-space: normal !important;
 }
+
 .mat-checkbox-inner-container {
   margin-top: 4px;
+}
+
+.mat-typography {
+  h1 {
+    margin-top: 16px;
+    margin-bottom: 0px;
+  }
 }

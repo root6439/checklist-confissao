@@ -1,6 +1,6 @@
 <h1>Segundo mandamento</h1>
 
-<h2>"Não tomarás o nome do Senhor teu Deus em vão."</h2>
+<h3>"Não tomarás o nome do Senhor teu Deus em vão."</h3>
 
 <p *ngFor="let pecado of mandamentos.pecados">
   <mat-checkbox color="primary" [(ngModel)]="pecado.selecionado">
@@ -20,9 +20,9 @@
   Avançar
 </button>
 
-<button mat-button [matMenuTriggerFor]="menu">Limpar</button>
+<button mat-button [matMenuTriggerFor]="menu" [disabled]="service.somePecadoSelected()">Limpar</button>
 <mat-menu #menu="matMenu">
-  <button mat-menu-item (click)="service.clearMandament(mandamentos)">
+  <button mat-menu-item (click)="service.clearMandament(mandamentos)" [disabled]="service.atLeastOneSelected(mandamentos)">
     Limpar este mandamento
   </button>
   <button mat-menu-item (click)="service.clearAll()">Limpar tudo</button>

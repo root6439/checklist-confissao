@@ -4,14 +4,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent, DialogNoDataStorage } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, DialogNoDataStorage],
   imports: [
     BrowserModule,
     RouterModule,
@@ -22,6 +23,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatMenuModule,
     MatIconModule,
     MatProgressBarModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

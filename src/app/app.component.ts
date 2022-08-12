@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Route, Router } from '@angular/router';
 
 @Component({
@@ -6,7 +7,7 @@ import { Route, Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title: string = 'checklist-confissao';
 
   isMobile: boolean = window.screen.width <= 720;
@@ -22,7 +23,13 @@ export class AppComponent {
     'oitavo-mandamento': 100,
   };
 
-  constructor(private route: Router) {}
+  constructor(private route: Router, private dialog: MatDialog) {}
+
+  ngOnInit(): void {
+    this.dialog.open(DialogNoDataStorage, {
+      width: '30%'
+    });
+  }
 
   get progress(): number {
     let aux: string[] = this.route.url.split('/');
@@ -34,3 +41,16 @@ export class AppComponent {
     return this.progressData[aux[2]];
   }
 }
+
+@Component({
+  selector: 'no-data-storage-warning',
+  template: `<h1 mat-dialog-title class="mb-2">Seja bem vindo ao Checklist Confissão :D</h1>
+    <div mat-dialog-content class="mb-2">
+      Passando apenas pra avisar que não armazenamos qualquer informação sua,
+      pode marcar as caixinhas a vontade que ninguém vai ficar sabendo.
+    </div>
+    <div mat-dialog-actions>
+      <button mat-flat-button color="accent" mat-dialog-close>Maravilha!</button>
+    </div>`,
+})
+export class DialogNoDataStorage {}
