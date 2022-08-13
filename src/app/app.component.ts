@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Route, Router } from '@angular/router';
+import { NavigationEnd, Route, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -12,8 +12,6 @@ export class AppComponent implements OnInit {
   title: string = 'checklist-confissao';
 
   isMobile: boolean = window.screen.width <= 720;
-
-  route$: Subscription = new Subscription();
 
   progressData: { [value: string]: number } = {
     'primeiro-mandamento': 10.25,
@@ -32,11 +30,10 @@ export class AppComponent implements OnInit {
     this.dialog.open(DialogNoDataStorage, {
       width: '30%',
     });
+  }
 
-    this.route$ = this.router.events.subscribe((val) => {
-      console.log(val);
-      
-    });
+  onActivate() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   get progress(): number {
