@@ -9,8 +9,6 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title: string = 'checklist-confissao';
-
   isMobile: boolean = window.screen.width <= 720;
 
   progressData: { [value: string]: number } = {
@@ -28,7 +26,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.dialog.open(DialogNoDataStorage, {
-      width: '30%',
+      width: this.isMobile ? '80%' : '30%',
     });
   }
 
@@ -39,7 +37,7 @@ export class AppComponent implements OnInit {
   get progress(): number {
     let aux: string[] = this.router.url.split('/');
 
-    if (aux[1] != 'checklist') {
+    if (aux[1] != 'checklist' || aux[2] == 'imprimir') {
       return 0;
     }
 
@@ -50,7 +48,7 @@ export class AppComponent implements OnInit {
 @Component({
   selector: 'no-data-storage-warning',
   template: `<h1 mat-dialog-title class="mb-2">
-      Seja bem vindo ao Checklist Confissão :D
+      Seja bem-vindo ao Checklist Confissão!
     </h1>
     <div mat-dialog-content class="mb-2">
       Passando apenas pra avisar que não armazenamos qualquer informação sua,
