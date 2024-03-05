@@ -41,7 +41,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.dialog.open(DialogNoDataStorage, {
-      width: this.isMobile ? '80%' : '30%',
+      width: this.isMobile ? '80%' : '40%',
     });
   }
 
@@ -66,13 +66,17 @@ export class AppComponent implements OnInit {
       Seja bem-vindo ao Checklist Confissão!
     </h1>
     <div mat-dialog-content class="mb-2">
-      Passando apenas pra avisar que não armazenamos qualquer informação sua,
-      pode marcar as caixinhas a vontade que ninguém vai ficar sabendo.
+      <p>
+        Esse sistema não armazena qualquer informação sua. Marque seus pecados a
+        vontade pois ninguém vai ficar sabendo deles.
+      </p>
+      <p>
+        Por favor, divulgue esse projeto para que mais irmãos possam se
+        beneficiar com ele.
+      </p>
     </div>
-    <div mat-dialog-actions>
-      <button mat-flat-button color="accent" mat-dialog-close>
-        Maravilha!
-      </button>
+    <div mat-dialog-actions align="end">
+      <button mat-flat-button color="accent" mat-dialog-close>Ok</button>
     </div>`,
   standalone: true,
   imports: [MatDialogModule, MatButtonModule],
