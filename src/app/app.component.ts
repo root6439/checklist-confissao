@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
-import { NavigationEnd, Route, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
-
+import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
