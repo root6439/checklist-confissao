@@ -8,6 +8,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-terceiro',
@@ -21,6 +22,7 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     MatIconModule,
     MatMenuModule,
+    MatButtonModule,
   ],
 })
 export class TerceiroComponent implements OnDestroy {

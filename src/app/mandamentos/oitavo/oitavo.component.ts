@@ -12,13 +12,20 @@ import { MandamentosService } from '../mandamentos.service';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-oitavo',
   templateUrl: './oitavo.component.html',
   styleUrls: ['./oitavo.component.scss'],
   standalone: true,
-  imports: [MatCheckboxModule, RouterModule, CommonModule, FormsModule],
+  imports: [
+    MatCheckboxModule,
+    RouterModule,
+    CommonModule,
+    FormsModule,
+    MatButtonModule,
+  ],
 })
 export class OitavoComponent implements OnDestroy {
   mandamentos: Mandamento = OITAVO_MANDAMENTO;
