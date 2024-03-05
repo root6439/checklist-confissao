@@ -3,13 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-confissao',
   templateUrl: './confissao.component.html',
-  styleUrls: ['./confissao.component.scss']
+  styleUrls: ['./confissao.component.scss'],
+  standalone: true,
 })
-export class ConfissaoComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class ConfissaoComponent {}

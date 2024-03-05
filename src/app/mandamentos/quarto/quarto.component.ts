@@ -2,11 +2,26 @@ import { QUARTO_MANDAMENTO } from './../../shared/data/QuartoMandamento';
 import { Mandamento } from './../../shared/models/Mandamento';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MandamentosService } from '../mandamentos.service';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-quarto',
   templateUrl: './quarto.component.html',
   styleUrls: ['./quarto.component.scss'],
+  standalone: true,
+  imports: [
+    MatCheckboxModule,
+    RouterModule,
+    CommonModule,
+    FormsModule,
+    MatIconModule,
+    MatMenuModule,
+  ],
 })
 export class QuartoComponent implements OnDestroy {
   mandamentos: Mandamento = QUARTO_MANDAMENTO;

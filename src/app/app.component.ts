@@ -1,10 +1,27 @@
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { Router, RouterModule } from '@angular/router';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  standalone: true,
+  imports: [
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatProgressBarModule,
+    RouterModule,
+    CommonModule,
+  ],
 })
 export class AppComponent implements OnInit {
   isMobile: boolean = window.screen.width <= 720;
@@ -57,5 +74,7 @@ export class AppComponent implements OnInit {
         Maravilha!
       </button>
     </div>`,
+  standalone: true,
+  imports: [MatDialogModule, MatButtonModule],
 })
 export class DialogNoDataStorage {}
