@@ -2,9 +2,9 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PrimeiroComponent } from './primeiro/primeiro.component';
-import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatLegacyCheckboxModule as MatCheckboxModule } from '@angular/material/legacy-checkbox';
 import { MandamentosRoutingModule } from './mandamentos-routing.module';
-import { MatButtonModule } from '@angular/material/button';
+import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
 import { FormsModule } from '@angular/forms';
 import { SegundoComponent } from './segundo/segundo.component';
 import { TerceiroComponent } from './terceiro/terceiro.component';
@@ -15,7 +15,7 @@ import { SetimoEDecimoComponent } from './setimo-e-decimo/setimo-e-decimo.compon
 import { OitavoComponent } from './oitavo/oitavo.component';
 import { ImprimirComponent } from './imprimir/imprimir.component';
 import { MatIconModule } from '@angular/material/icon';
-import { MatMenuModule } from '@angular/material/menu';
+import { MatLegacyMenuModule as MatMenuModule } from '@angular/material/legacy-menu';
 
 @NgModule({
   declarations: [
