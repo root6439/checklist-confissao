@@ -5,7 +5,7 @@
       <button mat-button routerLink="confissao">A Confissão</button>
       <button mat-button routerLink="perguntas">Perguntas</button>
       <button mat-button routerLink="dicas">Dicas</button>
-      <button mat-button routerLink="checklist">Checklist</button>
+      <button mat-button routerLink="checklist/primeiro">Checklist</button>
     </div>
 
     <ng-template #mobileMenu>
@@ -22,19 +22,14 @@
         <button mat-menu-item routerLink="dicas">
           <span>Dicas</span>
         </button>
-        <button mat-menu-item [routerLink]="['checklist', 'primeiro']">
+        <button mat-menu-item routerLink="checklist/primeiro">
           <span>Checklist</span>
         </button>
       </mat-menu>
     </ng-template>
   </mat-toolbar>
 
-  <mat-progress-bar
-    mode="determinate"
-    [value]="progress"
-    color="primary"
-    *ngIf="progress != 0"
-  ></mat-progress-bar>
+  <mat-progress-bar mode="determinate" [value]="progress" color="primary" *ngIf="progress != 0"></mat-progress-bar>
 </header>
 <div class="container-lg">
   <router-outlet (activate)="onActivate()"></router-outlet>

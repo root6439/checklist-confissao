@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { ConfissaoComponent } from './app/confissao/confissao.component';
 import { PerguntasComponent } from './app/perguntas/perguntas.component';
 import { DicasComponent } from './app/dicas/dicas.component';
+import { PrimeiroComponent } from './app/mandamentos/primeiro/primeiro.component';
 
 export const routes: Routes = [
   { path: 'confissao', component: ConfissaoComponent },

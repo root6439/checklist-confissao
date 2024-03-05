@@ -10,13 +10,13 @@ import { OitavoComponent } from './oitavo/oitavo.component';
 import { ImprimirComponent } from './imprimir/imprimir.component';
 
 export const MANDAMENTOS_ROUTES: Routes = [
-  { path: 'primeiro', component: PrimeiroComponent },
-  { path: 'segundo', component: SegundoComponent },
-  { path: 'terceiro', component: TerceiroComponent },
-  { path: 'quarto', component: QuartoComponent },
-  { path: 'quinto', component: QuintoComponent },
-  { path: 'sexto-e-nono', component: SextoENonoComponent },
-  { path: 'setimo-e-decimo', component: SetimoEDecimoComponent },
-  { path: 'oitavo', component: OitavoComponent },
+  { path: 'primeiro-mandamento', component: PrimeiroComponent },
+  { path: 'segundo-mandamento', component: SegundoComponent },
+  { path: 'terceiro-mandamento', component: TerceiroComponent },
+  { path: 'quarto-mandamento', component: QuartoComponent },
+  { path: 'quinto-mandamento', component: QuintoComponent },
+  { path: 'sexto-e-nono-mandamentos', component: SextoENonoComponent },
+  { path: 'setimo-e-decimo-mandamentos', component: SetimoEDecimoComponent },
+  { path: 'oitavo-mandamento', component: OitavoComponent },
   { path: 'imprimir', component: ImprimirComponent },
 ];
